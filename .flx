@@ -1,4 +1,16 @@
 [deploy]
 tar xzf user_cabal_dir-ghc7.0.4-cabal0.10.2.tar.gz
+sed 's/HOMEDIR/\/mnt/g' .cabal/config_flx > .cabal/config
+
+[replace]
+.cabal/config USER_NAME      PROJECT_NAME
+
+[deploy]
 ghc -threaded --make -o public_html/dispatch.fcgi public_html/Main.hs
 chmod 705 public_html/dispatch.fcgi
+rm .cabal/config
+cp .cabal/config_flx .cabal/config
+sed 's/HOMEDIR/\/mnt/g' .cabal/config_flx > .cabal/config
+
+[replace]
+.cabal/config USER_NAME      PROJECT_NAME
