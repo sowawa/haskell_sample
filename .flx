@@ -1,4 +1,8 @@
+[setup]
+rm -rf .cabal
+
 [deploy]
-bash cabal_install.sh 
-ghc -threaded --make -o public_html/dispatch.fcgi public_html/Main.hs
+/usr/local/cabal/bin/cabal update
+/usr/local/cabal/bin/cabal install --oneshot
+cp -v .cabal/bin/haskell_sample public_html/dispatch.fcgi
 chmod 705 public_html/dispatch.fcgi
