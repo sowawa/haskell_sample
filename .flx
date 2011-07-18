@@ -3,6 +3,6 @@ rm -rf .cabal
 
 [deploy]
 /usr/local/cabal/bin/cabal update
-/usr/local/cabal/bin/cabal install --oneshot
+/usr/local/cabal/bin/cabal install --one-shot
 cp -v dist/build/haskell_sample/haskell_sample public_html/dispatch.fcgi
 chmod 705 public_html/dispatch.fcgi
