@@ -1,0 +1,14 @@
+Name:                haskell-sample
+Version:             0.0.0
+Synopsis:            Haskell on fluxflex
+License:             BSD3
+Category:            Web
+Build-type:          Simple
+Extra-source-files:  README
+Cabal-version:       >=1.2
+
+Executable haskell_sample
+  Main-is:           Main.hs
+  Ghc-options:       -threaded
+  Build-depends:     base
+                   , fastcgi
